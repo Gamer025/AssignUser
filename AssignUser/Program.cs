@@ -46,7 +46,7 @@ static void AssignUsers(ActionInputs inputs)
     );
 
 
-    Console.WriteLine($"Trying to assign all valid users.");
+    Console.WriteLine($"Trying to assign all valid users: {String.Join(" ", users)}");
     ghclient.Issue.Assignee.AddAssignees(inputs.Owner, inputs.Name, inputs.ID, new AssigneesUpdate(users));
 
 }
