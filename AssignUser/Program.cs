@@ -19,6 +19,8 @@ parser.WithParsed(options => AssignUsers(options));
 
 static void AssignUsers(ActionInputs inputs)
 {
+    Console.WriteLine($"AssignUser Version {System.Reflection.Assembly.GetEntryAssembly().GetName().Version}");
+
     List<string> users = new List<string>();
     List<string> nonAssignableUsers = new List<string>();
 
